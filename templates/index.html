@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://mail.tierra.co.kr/ -->
+<html lang="ko" class="gt-ie8 gt-ie9 not-ie"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>MAILNARA v4.0 ::: (주)티에라</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta name="robots" content="noindex, nofollow">
+
+
+	<!-- Open Sans font from Google CDN -->
+	<link href="https://guide-level.com/mailnara/css" rel="stylesheet" type="text/css">
+
+	<!-- Pixel Admin's stylesheets -->
+	<link href="https://guide-level.com/mailnara/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="https://guide-level.com/mailnara/pixel-admin.css" rel="stylesheet" type="text/css">
+	<link href="https://guide-level.com/mailnara/mailnara.css" rel="stylesheet" type="text/css">
+	<link href="https://guide-level.com/mailnara/mailnara_theme.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]>
+		<script src="./assets/javascripts/ie.min.js"></script>
+	<![endif]-->
+	
+	<!-- login css -->
+	<link href="https://guide-level.com/mailnara/login.css" rel="stylesheet" type="text/css">
+
+	<script>
+	var file_select_str = '';
+	var file_delete_str = '';
+
+	
+	</script>
+
+	<script src="https://guide-level.com/mailnara/jquery-1.11.3.min.js.download"></script>
+        <!--script src="/new_mailnara_web/assets/javascripts/mailnara.js"></script-->
+
+        <!-- Pixel Admin's javascripts -->
+        <script src="https://guide-level.com/mailnara/bootstrap.min.js.download"></script>
+        <script src="https://guide-level.com/mailnara/pixel-admin.js.download"></script>
+
+
+	<script type="text/javascript" src="https://guide-level.com/mailnara/string.js.download"></script>
+
+
+	
+
+
+</script>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body class="theme-clean  korean" id="id_body" onload="Init_Body(document.login_form, &#39;tierra.co.kr&#39;, &#39;&#39;, &#39;U&#39;, false);">
+
+<div id="it_accredit" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" style="width:380px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" id="foreign_colose" class="close" data-dismiss="modal" aria-label="닫기"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">해외IP 인증</h4>
+			</div>
+			<div class="modal-body no-padding-b">
+				<div class="note note-danger">
+					<p class="text-danger no-margin-b">접속하신 IP는 해외 IP로 확인됩니다.<br>보안 운영 정책에 따라 보안접속암호 입력 후 접속할 수 있습니다.				</p></div>
+				<form class="form-horizontal" onsubmit="return false">
+					<div class="form-group">
+						<label for="passwd_origin" class="col-sm-3 control-label">암호</label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control" id="foreign_passwd">
+						</div>
+					</div><!-- / .form-group -->					
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" onclick="foreign_check(document.login_form)">확인</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--200821-->
+<div id="outlook_auto" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" style="width:900px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="닫기"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">아웃룩 자동세팅 프로그램</h4>
+			</div>
+			<div class="modal-body no-padding-b">
+				<p class="no-margin-b">프로그램을 설치한 후 메일주소와 아웃룩버전을 선택하면 아웃룩이 자동으로 설정되어 설치됩니다!</p>
+				<p class="text-danger mt5">※ 비밀번호는 보안상의 이유로 설정하지 않았으므로 Outlook 실행 후 메일계정 비밀번호를 입력하시기 바랍니다.</p>
+				<div class="text-center mt10">
+					<a href="https://mail.tierra.co.kr/new_mailnara_web/manual/inst_MailnaraOutlookAutoSet.exe" class="btn btn-primary">아웃룩 자동세팅 프로그램 다운로드</a>
+				</div>
+				<table class="table" style="margin-top:20px;">
+					<tbody>
+					<tr>
+						<th class="text-left">아웃룩 자동세팅 프로그램 실행 후 설정방법</th>
+					</tr>
+					<tr>
+						<td class="text-left row">
+							<div class="col-md-4">
+								<p class="text-bold mb5">1. 계정정보 입력</p>
+								<img class="max_wd" src="https://guide-level.com/mailnara/outlook_auto01.png" alt="">
+							</div>
+							<div class="col-md-4">
+								<p class="text-bold mb5">2. 아웃룩 버전 선택</p>
+								<img class="max_wd" src="https://guide-level.com/mailnara/outlook_auto02.png" alt="">
+							</div>
+							<div class="col-md-4">
+								<p class="text-bold mb5">3. 아웃룩 세팅 확인</p>
+								<img class="max_wd" src="https://guide-level.com/mailnara/outlook_auto03.png" alt="">
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">창닫기</button>
+			</div>
+		</div><!-- modal-content -->
+	</div>
+</div>
+<!--//200821-->
+
+<!--211005-->
+<div id="certification" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="닫기"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">인증서 오류 발생 시 처리 방법</h4>
+			</div>
+			<div class="modal-body no-padding-b">
+				<p class="text-center text-error font14">
+					<b>아래 다운로드 버튼을 누르시면 파일이 다운로드 됩니다.</b>
+				</p>
+
+				<div class="text-center mt10 mb10">
+					<a href="https://mail.tierra.co.kr/#" class="btn btn-primary" onclick="Download_CertFile()">ISRG인증서 자동세팅 다운로드</a>
+				</div>
+
+				<p class="well p15 well_blue">
+					1. MailnaraCertAdd.zip 파일을 다운로드 받습니다.<br>
+					2. 다운로드 한 파일의 압축을 해제하여 MailnarCertAdd.exe 파일을 실행합니다.<br>
+					3. 파일을 실행하면 다음과 같은 창이 뜨며, 엔터를 눌러 종료합니다. (엔터를 누르면 창이 닫힘)<br>
+					<img alt="자동세팅 화면 " src="https://guide-level.com/mailnara/MailnaraCertset_01.png" class="mt5 mb10">
+					4. PC를 재부팅하여 웹메일로 접속합니다.<br>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">창닫기</button>
+			</div>
+		</div><!-- modal-content -->
+	</div>
+</div>
+<!--//211005-->
+
+
+<form id="login_form" name="login_form" method="post" action="first" onsubmit="return Check_Form(this)">
+        <input type="hidden" name="login_host" value="tierra.co.kr">
+        <input type="hidden" id="login_type" name="login_type" value="U">
+        <input type="hidden" name="template_language" value="korean">
+        <input type="hidden" name="admin_login" value="0">
+        <input type="hidden" name="org_domain" value="">
+		<input type="hidden" name="org_uid" value="">
+		<input type="hidden" id="passwd_validation" name="passwd_validation" value="true">
+		<input type="hidden" id="is_mobile" name="is_mobile" value="W">
+		<input type="hidden" id="webmail_admin_login" name="webmail_admin_login" value="">
+		<input type="hidden" name="usingAdminChange" value="">
+		<input type="hidden" name="keyTime" value="">
+
+<button type="button" id="foreign_button" class="hidden" data-toggle="modal" data-target="#it_accredit"></button>
+
+<div id="wrap">
+<div id="login" class="">
+	<div class="header dis_table mobile_none">
+		<div class="tr">
+			<p class="logo td">
+			                                    <a href="http://www.tierra.co.kr/" target="_blank"><img src="https://guide-level.com/mailnara/logo_view.php" alt="회사로고" onload="imgsize(this)" name="logo_img" border="0" width="100" height="30"></a></p>
+
+                            	
+			<!-- [D] 회사소개가 없으면 아래 p가 아예 지워지도록 해주세요 -->
+			<p class="title td">(주)티에라</p>
+		</div>
+	</div>
+	<div class="header mobile_view">
+
+		<p class="text-center no-margin-b" style="background-color:#374B65;padding:12px 10px;">
+
+		                                 <a href="http://www.tierra.co.kr/" target="_blank"><img src="https://guide-level.com/mailnara/logo_view.php" alt="회사로고" onload="imgsize(this)" name="logo_img" border="0" width="100" height="30"></a></p>
+
+                            		<!-- [D] 회사소개가 없으면 아래 p가 아예 지워지도록 해주세요 -->
+		<p class="title">(주)티에라</p>
+	</div>
+	
+	<p class="image">
+			    
+
+		    <img src="https://guide-level.com/mailnara/main.jpg" alt="회사대표이미지">
+		 	</p>
+
+	<div class="login_area">
+
+		<!-- S://tab -->
+		<ul class="nav nav-tabs text-center">
+			<li class="active col-xs-6 no-padding-hr">
+				<a href="https://mail.tierra.co.kr/#receivemail" id="user_login_tab" name="user_login_tab" data-toggle="tab" onclick="Check_Type(document.login_form, &#39;U&#39;)">
+					사용자
+									</a>
+			</li>
+			<li class="col-xs-6 no-padding-hr ">
+				<a href="https://mail.tierra.co.kr/#outmail" id="admin_login_tab" name="admin_login_tab" data-toggle="tab" class="no-margin-r" onclick="Check_Type(document.login_form, &#39;A&#39;)">
+					관리자
+									</a>
+			</li>
+		</ul>
+		<div class="tab-content tab-content-bordered">
+			<!-- S:// 사용자로그인 -->
+			<div class="tab-pane fade active in" id="receivemail">
+				<div class="row text-center" style="margin-bottom:15px">
+					<input type="checkbox" name="idsave" id="idsave">
+					<label for="idsave">
+						아이디 저장
+											</label>
+				</div>
+				<div class="row">
+					<label class="col-xs-3 control-label" for="login_id">
+						아이디
+											</label>
+					<div class="col-xs-9"><input type="text" id="login_id" name="horse" tabindex="1" accesskey="l" required maxlength="100" value="" onclick="Check_ID(document.login_form)" onblur="Replace_ID(document.login_form)" class="form-control" placeholder="이메일을 입력하세요"></div>
+				</div>
+				<div class="row">
+					<label class="col-xs-3 control-label" for="login_passwd">
+						비밀번호
+											</label>
+					<div class="col-xs-9"><input type="password" id="login_passwd" name="pig" tabindex="2" required maxlength="31" value="" class="form-control" placeholder="비밀번호를 입력하세요"></div>
+				</div>
+				<button type="submit" class="btn btn-lg btn-primary login only">
+					로그인
+									</button>
+			</div><!-- E:// 사용자로그인 -->
+			
+			<!-- S:// 관리자로그인 -->
+			<div class="tab-pane fade" id="outmail">
+				<div class="row">
+					<label class="col-xs-3 control-label" for="admin_id">
+						아이디
+						</label>
+					<div class="col-xs-9"><input type="text" id="admin_id" name="admin_id" class="form-control" placeholder="아이디를 입력하세요"></div>
+				</div>
+				<div class="row">
+					<label class="col-xs-3 control-label" for="admin_passswd">
+						비밀번호
+											</label>
+					<div class="col-xs-9"><input type="password" id="admin_passwd" name="admin_passwd" class="form-control" placeholder="비밀번호를 입력하세요"></div>
+				</div>
+				<button type="submit" class="btn btn-lg btn-primary login only">
+					로그인
+									</button>
+			</div><!-- E:// 관리자로그인 -->
+		</div> <!-- E:// tab-content -->
+		
+	</div><!-- E://login_area -->
+
+
+	<div class="row panel-padding no-padding-hr tablet_none">
+		<div class="col-xs-6">
+			<a href="https://mail.tierra.co.kr/#" onclick="Open_OutlookGuide()" class="btn btn-lg only">
+				아웃룩 설정방법
+							</a>
+		</div>
+		<div class="col-xs-6">
+			<a href="https://mail.tierra.co.kr/#" data-toggle="modal" data-target="#outlook_auto" class="btn btn-lg only"><!--200821-->
+				아웃룩 자동세팅
+							</a>
+		</div>
+		<!--211001_수정-->
+		<div class="col-xs-12">
+			<a href="https://mail.tierra.co.kr/#" class="btn btn-lg only error" data-toggle="modal" data-target="#certification"><!--211005-->
+				<img src="https://guide-level.com/mailnara/error_icon.png" alt="인증서 오류 아이콘" class="valign-2"><!--211005-->
+				인증서 오류 발생 시 처리 방법
+							</a>
+		</div>
+		<!--//211001_수정-->
+
+	</div>
+		
+
+<!-- 14. $FOOTER =========================================================================== -->
+
+	<div id="login_footer">
+		<p class="copyright opensans">Copyright © <a href="http://www.tierra.co.kr/" target="_blank" style="display:inline-block"><b>(주)티에라</b></a> All rights reserved.</p>
+	</div>
+
+	<!-- Get jQuery from Google CDN -->
+	<!--[if !IE]> -->
+	<!-- <![endif]-->
+	<!--[if lte IE 9]>
+		<script type="text/javascript"> window.jQuery || document.write('<script src="./assets/javascripts/jquery-1.8.3.min.js">'+"<"+"/script>"); </script>
+	<![endif]-->
+	
+	
+<!-- /14. $FOOTER -->
+</div> <!-- / #login-wrapper -->
+</div> <!-- E://wrap -->
+
+</form>
+
+
+
+<script>
+
+</script>
+</body></html>
